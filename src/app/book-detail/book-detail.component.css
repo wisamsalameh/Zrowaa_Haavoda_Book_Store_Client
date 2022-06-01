@@ -1,0 +1,4 @@
+ /*for invalid form controls*/
+ input.invalid {
+    border-color: red;
+  }

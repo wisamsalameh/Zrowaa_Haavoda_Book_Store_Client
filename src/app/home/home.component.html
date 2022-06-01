@@ -1,0 +1,36 @@
+<div class="container">
+
+    <div class="top-space row">
+        <div style="border:solid 1px; " class="col-md-12 col-sm-12 col-lg-12">
+
+
+            <div style="align-items: center;
+                justify-content: center; display: flex;">
+                <img style="width:100%; " src="assets/pics/logo.png">
+            </div>
+
+        </div>
+    </div>
+
+    <div class="top-space row">
+        <div style="border:solid 1px; min-height: 750px; " class="col-md-10 col-sm-10 col-lg-10">
+            <div *ngIf="bool">
+                <app-welcome>
+
+                </app-welcome>
+            </div>
+
+            <div *ngIf="!bool">
+                <app-books-details>
+
+                </app-books-details>
+            </div>
+        </div>
+        <div style="text-align: -webkit-center;border:solid 1px;" class="col-md-2 col-sm-2 col-lg-2 "
+            (click)="GetBooksHandler()">
+
+            <button style="margin-top: 60%;font-size: 28px;" type="button" class="btn btn-primary">Get Books</button>
+        </div>
+    </div>
+
+</div>

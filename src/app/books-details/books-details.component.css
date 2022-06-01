@@ -1,0 +1,50 @@
+table {
+  width: 100%;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}
+
+.demo-table {
+  width: 100%;
+}
+
+.mat-row .mat-cell {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+::ng-deep .mat-sort-header-container {
+
+  font-size: 25px;
+}
+
+.mat-row:hover .mat-cell {
+  border-color: currentColor;
+}
+
+.demo-row-is-clicked {
+  font-weight: bold;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+::ng-deep .mat-paginator-page-size-label {
+  font-size: 20px;
+
+}
+
+::ng-deep .mat-paginator-range-actions {
+  font-size: 20px;
+}
+
+.highlight {
+  background: rgb(226, 220, 220);
+  /* green */
+}

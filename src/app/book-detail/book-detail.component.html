@@ -1,0 +1,54 @@
+<div class="container" style="min-width: 26vw;">
+    <div class="col-md-12 col-xs-12 col-md-12  col-lg-12">
+
+        <h1 mat-dialog-title class="text-center"> <strong> Book Details </strong> </h1>
+
+        <form [formGroup]="bookDetailGroup" class="p-2">
+
+            <div class="form-group" style="display:flex">
+
+                <div class="col-md-4 col-xs-4 col-md-4  col-lg-4 form-group">
+                    <div style="text-align: center">
+                        <label for="BookPrice" style="font-weight: bold;font-size: 18px;"> Price</label>
+                    </div>
+                    <div>
+                        <input (keydown)="preventMinusAnde($event)" id="BookPrice" type="number" min="0"
+                            class="form-control" formControlName="price"
+                            [class.invalid]="bookDetailGroup.controls['price'].errors && bookDetailGroup.controls['price'].touched">
+                    </div>
+
+                </div>
+
+                <div class="col-md-4 col-xs-4 col-md-4  col-lg-4 form-group">
+                    <div style="text-align: center">
+                        <label for="BookDescription" style="font-weight: bold;font-size: 18px;"> Description</label>
+                    </div>
+                    <div>
+                        <input id="BookDescription" type="text" class="form-control" formControlName="description">
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-xs-4 col-md-4  col-lg-4 form-group">
+                    <div style="text-align: center">
+                        <label for="BookName" style="font-weight: bold;font-size: 18px;"> Name</label>
+                    </div>
+                    <div>
+                        <input
+                            [class.invalid]="bookDetailGroup.controls['name'].errors && bookDetailGroup.controls['name'].touched"
+                            id="BookName" type="text" class="form-control" formControlName="name">
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+    <div class="text-center row" dir="rtl">
+        <div class="col-md-4 col-xs-4 col-md-4  col-lg-4">
+            <button class="btn btn-primary" style="width:100%" (click)="SaveHandler()">Save</button>
+        </div>
+        <div class="col-md-4 col-xs-4 col-md-4  col-lg-4">
+            <button type="button" class="btn btn-primary" style="width:100%" (click)="CloseHandler()">Close</button>
+        </div>
+    </div>
+</div>
